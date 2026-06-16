@@ -5,6 +5,8 @@ import { Logo } from './components/Logo';
 import { DesktopNav } from './components/DesktopNav';
 import { MobileNav } from './components/MobileNav';
 
+import { EMAIL } from '@shared/constants/contact';
+
 const Navbar = memo(() => {
   const {
     menuOpen,
@@ -43,7 +45,7 @@ const Navbar = memo(() => {
 
         <div className="flex items-center gap-2.5">
           <motion.a
-            href="mailto:awareram@gmail.com"
+            href={`mailto:${EMAIL}`}
             className="btn-primary hidden sm:inline-flex text-xs px-4 py-2"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.97 }}
