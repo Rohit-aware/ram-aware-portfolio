@@ -1,6 +1,7 @@
 import { memo } from 'react';
 import { motion } from 'framer-motion';
-import { Linkedin, Mail, MapPin } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { SOCIAL_LINKS } from '@shared/constants/contact';
 
 const Footer = memo(() => (
   <footer className="bg-surface-0 border-t border-surface-200">
@@ -19,10 +20,7 @@ const Footer = memo(() => (
         </div>
 
         <div className="flex items-center gap-2">
-          {[
-            { href: 'mailto:awareram@gmail.com', icon: Mail, label: 'Email' },
-            { href: 'https://www.linkedin.com/in/ram-aware-423b25112', icon: Linkedin, label: 'LinkedIn' },
-          ].map(({ href, icon: Icon, label }) => (
+          {SOCIAL_LINKS.map(({ href, icon: Icon, label }) => (
             <motion.a
               key={label}
               href={href}
